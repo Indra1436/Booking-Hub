@@ -1,0 +1,265 @@
+/* General Styles */
+.main-container, 
+.movie-detail-container {
+    font-family: Arial, sans-serif;
+    color: #f1f1f1;
+    margin: 20px;
+    max-width: 100%;
+}
+
+/* Movie Detail Section */
+.movie-detail-container {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.movie-detail {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.movie-detail-left {
+    flex: 1;
+    margin-right: 2rem;
+}
+
+.movie-detail-right {
+    flex: 2;
+}
+
+.movie-detail-poster {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.movie-detail h2 {
+    font-size: 28px;
+    margin-bottom: 1rem;
+    color: #ffdd57;
+}
+
+.release-date, .rating, .genres {
+    font-size: 16px;
+    margin-bottom: 0.5rem;
+    color: #cccccc;
+}
+
+.overview {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 1rem;
+    color: black;
+}
+
+.book-tickets-btn, #bt {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff5733;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.book-tickets-btn:hover, #bt:hover {
+    background-color: #c94422;
+}
+
+/* Backdrop and Inner Container */
+.backdrop {
+    height: 550px;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+}
+
+.inner-container {
+    display: flex;
+    flex-direction: row;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 20px;
+    gap: 20px;
+    max-width: 100%;
+    height: 550px;
+}
+
+.image-container img {
+    margin-top: 30px;
+    border-radius: 10px;
+    max-width: 300px;
+    width: 100%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.details-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.details-container h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    color: #ffdd57;
+}
+
+.rating-container {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.rating-container i {
+    color: #ffdd57;
+    margin-right: 8px;
+}
+
+.movie-info {
+    font-size: 1rem;
+    color: #cccccc;
+    margin: 10px 0;
+}
+
+/* Overview Container */
+.overview-container {
+    margin-top: 40px;
+}
+
+.overview-title {
+    font-size: 1.5rem;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.overview-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: black;
+}
+
+/* Pop-Up Component */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: black;
+    width: 400px;
+    text-align: center;
+}
+
+.popup-languages, .popup-formats {
+    margin: 20px 0;
+}
+
+.languageBtn button, .popup-formats button {
+    background-color: rgb(236, 243, 245);
+    width: 20%;
+    margin: 5px 10px;
+    border: none;
+    padding: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.languageBtn button:hover, .popup-formats button:hover {
+    box-shadow: 0px 0px 5px gray;
+}
+
+.popup-close {
+    padding: 0px 10px;
+    font-size: 30px;
+    border: none;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.popup-close:hover {
+    background: #c00;
+    color: white;
+}
+
+.launguageclosebtn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.launguageclosebtn p {
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+
+.heading {
+    text-align: start;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.formatesandlang {
+    background-color: rgb(236, 243, 245);
+    padding: 10px 0px;
+};
+
+.proceed-btn{
+    background-color: "rgb(236, 243, 245)";
+    width: 100%;
+    color:black;
+    padding: 10px;
+    border: none;
+    border-radius: px;
+    margin-top: 10px;
+}
+.proceed-btn:hover{
+    background-color: #ff5733;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .inner-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .image-container {
+        margin-bottom: 20px;
+    }
+
+    .details-container h1 {
+        font-size: 2rem;
+    }
+
+    .rating-container {
+        justify-content: center;
+    }
+
+    .movie-info {
+        font-size: 0.9rem;
+    }
+
+    button {
+        width: 100%;
+    }
+}

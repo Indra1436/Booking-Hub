@@ -1,0 +1,132 @@
+
+.ticket-booking-container {
+    font-family: Arial, sans-serif;
+    max-width: 1300px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.tags {
+    margin: 10px 0;
+}
+
+.tags span {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 5px 10px;
+    background: #ddd;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.date-selector {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.date-item {
+    padding: 10px;
+    text-align: center;
+    background: #f0f0f0;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 60px;
+    background: #fff;
+
+}
+
+.date-item.active {
+    background: #ff5252;
+    color: white;
+}
+
+.day, .date, .month {
+    display: block;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 40px 0;
+
+}
+
+select, .search-button {
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.theater-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.theater-item {
+    background: #f9f9f9;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.theater-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.amenities {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.amenities span {
+    margin-right: 20px;
+}
+
+.showtimes {
+    display: flex;
+    gap: 10px;
+}
+
+.showtimes button {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.showtimes button:hover {
+    background: #f0f0f0;
+}
+
+.note {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #888;
+}
+
+.dataandfilters{
+    display: flex;
+    justify-content: space-between;
+}

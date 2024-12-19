@@ -1,0 +1,67 @@
+/* Settings.css */
+
+/* Sidebar Styling */
+.settings-sidebar {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+}
+
+.settings-sidebar h5 {
+  font-weight: bold;
+  margin-left: 2rem;
+}
+
+.nav-item {
+  font-size: 20px;
+  position: relative; 
+  padding: 5px 5rem; 
+}
+
+/* Shadow-like border for top and bottom of each nav item */
+.nav-item::before,
+.nav-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.1); /* Light shadow color */
+}
+
+.nav-item::before {
+  top: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow on top */
+}
+
+.nav-item::after {
+  bottom: 0;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Shadow on bottom */
+}
+
+.nav-link {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+
+.settings-items {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Main Content Styling */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+form .btn {
+  padding: 0.5rem 1.5rem;
+}
+
+form input {
+  font-size: 1rem;
+}

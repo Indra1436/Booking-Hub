@@ -1,0 +1,408 @@
+/* General Styles */
+.navbar {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 2rem;
+  background-color: var(--bg-color, #fff);
+  color: var(--text-color, #333);
+}
+
+/* Navbar Top Section */
+.navUp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 4rem;
+}
+
+/* Logo Styles */
+.navUp .logo-img {
+  width: 180px;
+  height: auto;
+}
+
+/* Theme Toggle */
+.theme {
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--theme-color, #f44336);
+  transition: color 0.3s ease;
+}
+
+.theme:hover {
+  color: #d32f2f;
+  text-decoration: underline;
+}
+
+/* Location, Sign In, and Menu */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.location{
+  display: inline;
+  padding: 0.4rem 3rem;
+  background-color: var(--dropdown-bg, #fff);
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+/* Sign-in/Logged-in Button */
+.sign-in-button {
+  background-color: #f44336;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.overlay{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.sign-in-button:hover {
+  background-color: #d32f2f;
+  transform: scale(1.05);
+}
+
+.highlight-signIn {
+  border: 2px solid yellow;
+  animation: pulse 1.5s infinite;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Menu Icon */
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-icon .bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--menu-color, #333);
+  border-radius: 5px;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 350px;
+  height: 100%;
+  background-color: var(--sidebar-bg, #fff);
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 9999;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 1rem 0;
+  margin: 0;
+}
+
+.sidebar-menu li {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #ddd;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.sidebar-menu li:hover {
+  background-color: #f9f9f9;
+}
+
+/* Overlay for Sidebar */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9998;
+  display: none;
+}
+
+.overlay.active {
+  display: block;
+}
+
+/* Popup Styles */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 10000;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  max-width: 400px;
+  width: 100%;
+}
+
+.close-button {
+  position: absolute;
+  top: 5rem;
+  right: 20rem;
+  z-index: 1;
+  background: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background: #d32f2f;
+}
+
+/* Search Bar */
+.search-container {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  margin: 0 1rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navUp {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-actions {
+    gap: 0.5rem;
+  }
+
+  .search-container {
+    margin: 0.5rem 0;
+  }
+
+  .sidebar {
+    width: 250px;
+  }
+}
+/* Responsive Styles for 320px and smaller screens */
+@media (max-width: 320px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+    display: flex;
+  }
+
+  .navUp {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .logo-img {
+    width: 150px;
+    height: auto;
+  }
+
+  .theme {
+    font-size: 0.8rem;
+  }
+
+  .nav-actions {
+    display: block;
+    margin-top: 1rem;
+  }
+
+  .location {
+    padding: 0.3rem 1rem;
+    font-size: 0.75rem;
+  }
+
+  .sign-in-button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    width: 100%;
+  }
+
+  .menu-icon {
+    display: block;
+    margin-top: 1rem;
+  }
+
+  .menu-icon .bar {
+    width: 20px;
+    height: 2px;
+  }
+
+  .sidebar {
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .sidebar-menu li {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .overlay {
+    display: block;
+  }
+
+  .search-container {
+    margin-top: 1rem;
+  }
+
+  .search-input {
+    width: 100%;
+    font-size: 0.85rem;
+    padding: 0.4rem;
+  }
+
+  .popup-content {
+    padding: 1rem;
+    max-width: 280px;
+  }
+
+  .close-button {
+    top: 1rem;
+    right: 1rem;
+  }
+}
+
+/* Responsive Styles for screens between 320px and 611px */
+@media (max-width: 611px) and (min-width: 320px) {
+  .navbar {
+    padding: 0.5rem 1.5rem;
+    display: flex;
+  }
+
+  .navUp {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .logo-img {
+    width: 180px;
+  }
+
+  .theme {
+    font-size: 0.9rem;
+  }
+
+  .nav-actions {
+    display: block;
+    margin-top: 1rem;
+  }
+
+  .location {
+    padding: 0.3rem 1.5rem;
+    font-size: 0.85rem;
+  }
+
+  .sign-in-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    width: 100%;
+  }
+
+  .menu-icon .bar {
+    width: 22px;
+    height: 2px;
+  }
+
+  .sidebar {
+    width: 230px;
+  }
+
+  .sidebar-menu li {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .overlay {
+    display: block;
+  }
+
+  .search-container {
+    margin-top: 1rem;
+  }
+
+  .search-input {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 0.4rem;
+  }
+
+  .popup-content {
+    padding: 1.5rem;
+    max-width: 300px;
+  }
+
+  .close-button {
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+}

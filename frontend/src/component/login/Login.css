@@ -1,0 +1,102 @@
+/* Login.css */
+.loginBg {
+    background-image: url("../../assets/login_bg.jpg");
+    width: 60vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.loginBg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+/* Ensure any content inside .loginBg appears above the overlay */
+.loginBg > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Login container */
+.loginContainer {
+    width: 20rem;
+    height: 25rem;
+    box-shadow: 0 0 10px black;
+    background-color: rgba(255, 255, 255, 0.1); /* Light background for contrast */
+    border-radius: 10px; /* Rounded corners */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem; /* Add padding */
+}
+
+/* User input styling */
+.loginContainer h2 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.loginContainer input {
+    width: 90%;
+    height: 2rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+}
+.loginContainer input::placeholder{
+    text-align: center;
+}
+.loginContainer button{
+    width:15rem;
+    height:2rem;
+}
+/* Link styling */
+.loginContainer p {
+    color: white;
+    margin-top: 1rem;
+}
+
+.loginButton:hover{
+    width:8rem;
+    background-color:lightskyblue;
+
+}
+
+/* Responsive Adjustments for Tablet */
+@media (max-width: 768px) {
+    .loginBg {
+        background-position: top;
+        background-size: contain;
+        height: 70vh;
+    }
+    .loginContainer {
+        width: 80%; /* Adjust for smaller screens */
+        height: auto; /* Let height adjust with content */
+    }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 480px) {
+    .loginBg {
+        background-size: cover;
+        height: 60vh;
+    }
+    .loginContainer {
+        width: 90%;
+        padding: 0.5rem; /* Reduce padding on small screens */
+    }
+}
